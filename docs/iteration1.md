@@ -1,7 +1,19 @@
-# cashe-key
+#
 
-explorer.exe .
+##
 
+###
+
+#### node server.js & [1] 266100
+
+github push
+
+error: lstat("node_modules/.bin/pino"): Function not implemented
+fatal: Unable to process path node_modules/.bin/pino
+
+##### fix
+
+[1] 266100
 rm -rf node_modules
 pnpm install
 This cleans up all existing files and rebuilds symlinks properly.
@@ -15,5 +27,9 @@ Check permission and ownership:
 Make sure you own all files and have proper permissions:
 
 bash
+
+```
 sudo chown -R $USER:$USER node_modules
 chmod -R u+rw node_modules
+
+```
