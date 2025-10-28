@@ -2,18 +2,3 @@
 
 explorer.exe .
 
-rm -rf node_modules
-pnpm install
-This cleans up all existing files and rebuilds symlinks properly.
-
-Verify filesystem compatibility:
-
-Ensure your project folder is on a filesystem that supports symlinks (e.g., ext4 on Linux, APFS on macOS). Avoid network shares or some Windows filesystems that may have trouble.
-
-Check permission and ownership:
-
-Make sure you own all files and have proper permissions:
-
-bash
-sudo chown -R $USER:$USER node_modules
-chmod -R u+rw node_modules
